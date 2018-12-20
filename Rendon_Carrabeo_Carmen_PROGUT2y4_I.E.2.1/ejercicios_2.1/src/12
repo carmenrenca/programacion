@@ -1,0 +1,25 @@
+[1mdiff --git a/ejercicios/cuenta.java b/ejercicios/cuenta.java[m
+[1mindex ec9596c..1887048 100644[m
+[1m--- a/ejercicios/cuenta.java[m
+[1m+++ b/ejercicios/cuenta.java[m
+[36m@@ -16,7 +16,7 @@[m [mdouble retiro;[m
+ [m
+ [m
+ [m
+[31m-cuenta(){[m
+[32m+[m[32mpubliccuenta(){[m
+ 	id++;[m
+ numerocuenta=id;[m
+ [m
+[36m@@ -28,9 +28,9 @@[m [mnumerocuenta=id;[m
+ [m
+ [m
+ [m
+[31m-cuenta(long DNI, double saldoactual, double interesanual){[m
+[32m+[m[32mpublic cuenta(long DNI, double saldoactual, double interesanual){[m
+ 	this.DNI=DNI;[m
+[31m-	this.saldoactual=saldoactual;[m
+[32m+[m	[32mthis.saldoactual=saldoactual;[m[41m [m
+ 	this.interesanual=interesanual;[m
+ 	[m
+ }[m
