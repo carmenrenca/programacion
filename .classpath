@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="ACTIVIDADES DE APRENDIZAJE (U.T. 6)/src/ACTIVIDADES DE APRENDIZAJE (U.T. 6)/src"/>
+	<classpathentry kind="src" path="ejercicio6exam"/>
+	<classpathentry kind="src" path="Ejerciciospoo/src"/>
+	<classpathentry kind="output" path="ACTIVIDADES DE APRENDIZAJE (U.T. 6)/src/ACTIVIDADES DE APRENDIZAJE (U.T. 6)/bin"/>
+</classpath>

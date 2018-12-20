@@ -1,4 +1,4 @@
-package array;
+package ejercicio6;
 
 public class paresimpares {
 

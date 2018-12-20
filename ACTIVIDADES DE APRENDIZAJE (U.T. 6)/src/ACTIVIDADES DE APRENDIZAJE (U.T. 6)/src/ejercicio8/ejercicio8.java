@@ -1,4 +1,4 @@
-package array;
+package ejercicio8;
 
 import java.util.Random;
 
@@ -17,6 +17,7 @@ public class ejercicio8 {
 		for(int i=0; i<array.length;i++) {
 			for(int j=0; j<array[i].length;j++) {
 				array[i][j]=  randon.nextInt(9);
+				
 				
 				if(i==j) {
 					diagonal[i]=array[i][j];
