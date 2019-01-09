@@ -13,15 +13,7 @@ public class ejercicio12 {
 	char[][] matriz=new char[15][15];
 trycatch e= new trycatch();
 	Random random=new Random();
-	public void perdirpalabra() throws IOException {
-		ArrayList<String> lista = new ArrayList<String>(10);
-		System.out.println("Dame 10 palabras");
 	
-		for(int i=0; i<lista.size(); i++) {
-			lista.add(e.try_String());
-		}
-		
-	}
 	public void iniciomatriz() {
 		for (int i = 0; i < matriz.length; i++) {
 
@@ -33,6 +25,27 @@ trycatch e= new trycatch();
 
 		}
 	}
+	
+	
+	public void perdirpalabra() throws IOException {
+		ArrayList<String> lista = new ArrayList<String>(10);
+		System.out.println("Dame 10 palabras");
+	
+		for(int i=0; i<lista.size(); i++) {
+			lista.add(e.try_String());
+		}
+		
+	}
+public void escondopalabra() {
+	
+	int menu;
+	menu=random.nextInt(4);
+	
+	
+}
+
+public void vertical()
+
 	public  void imprimirsopadeletras() {
 		for (int i = 0; i < matriz.length; i++) {
 
