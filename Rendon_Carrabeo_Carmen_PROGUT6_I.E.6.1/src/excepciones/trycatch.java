@@ -22,7 +22,8 @@ BufferedReader teclado=new BufferedReader(new InputStreamReader(System.in));
  * @throws IOException
  */
 	public int try_int() throws IOException  {
-		int n = 0;
+
+int n = 0;
 		do {
 			try {
 				n=Integer.parseInt(teclado.readLine());
