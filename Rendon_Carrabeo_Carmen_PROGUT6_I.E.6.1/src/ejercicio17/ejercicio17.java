@@ -9,7 +9,7 @@ public class ejercicio17 {
 
 	static int n=3;
 	static int matriz[][] = new int[n][n];
-	static trycatch c= new trycatch();
+
 	
 	
 
