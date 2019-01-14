@@ -7,8 +7,8 @@ import excepciones.trycatch;
 
 public class ejercicio17 {
 
-	static int n;
-	static int matriz[][] = new int[4][4];
+	static int n=3;
+	static int matriz[][] = new int[n][n];
 	static trycatch c= new trycatch();
 	
 	
@@ -25,27 +25,49 @@ a.imprimirmatrizint(matriz);
 public static void rellenarmatriz(int matriz[][]) {
 	int j =0;
 	int i=0;
-	int contador = 0;
-	
-	
-	for( j=0; j<matriz.length; j++) {
-		contador++;
-		if(j<3) {
-			matriz[i][j+1]=contador;	
+	int contador = 1;
+	int principio = n-1;
+	int fin = 0;
+	do {
+		for( j=0; j<principio; j++) {
+		
+				
+				matriz[fin][j+1]=contador;	
+				contador++;
+		
 		}
-	
+
+		for(i=fin;i<principio; i++) {
+		
+
+		
+			matriz[i+1][principio]=contador;
+
+			contador++;
+		
 	}
-	j=3;
-	for(i=0;i<matriz.length; i++) {
-	if(j!=0) {
+
+		for(j=principio; j>fin; j--) {
+			
+			matriz[principio][j-1]=contador;
+			contador++;
+		}
+		
+		for(i=principio;i>fin+1;i--) {
+			
+			matriz[i-1][fin]=contador;
+			contador++;
+			
+		}
+		principio--;
+		fin++;
+	
+	}while(contador<(n*n));
+		
+		
+	
+}
 
 	
-		matriz[i+1][j]=contador;
-		contador++;
-
-	
 }
 
-}
-}
-}
