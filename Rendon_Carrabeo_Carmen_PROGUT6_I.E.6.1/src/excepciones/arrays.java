@@ -194,7 +194,7 @@ public void rellenarmatriz(int matriz[][] ) {
 		}
 		return "el menor es "+menor;
 	}
-	public void ordenarunafilamatriz(int matriz[][]) throws IOException {
+	public void ordenarunafilamatrizburbuja(int matriz[][]) throws IOException {
 		int fila;
 		int[] numeros =new int[5];
 		System.out.println("Dime la fila que quieres ordenar");
@@ -210,6 +210,57 @@ public void rellenarmatriz(int matriz[][] ) {
 		System.out.println("la fila "+fila+" ya está ordenada correctamente");
 		imprimirmatrizint(matriz);
 	}
+	public void ordenarunafilamatrizinsersion(int matriz[][]) throws IOException {
+		int fila;
+		int[] numeros =new int[5];
+		System.out.println("Dime la fila que quieres ordenar");
+		fila=e.try_int();
+		for(int j=0; j<numeros.length; j++) {
+			numeros[j]=matriz[fila][j];
+		}
+		insersion(numeros);
+		for(int i=0; i<numeros.length; i++) {
+			matriz[fila][i]=numeros[i];
+			
+		}
+		System.out.println("la fila "+fila+" ya está ordenada correctamente");
+		imprimirmatrizint(matriz);
+	}
+	
+	public void ordenarcolumnaburbuja(int matriz[][]) throws IOException {
+		int columna;
+		int[] numeros =new int[5];
+		System.out.println("Dime la columna que quieres ordenar");
+		columna=e.try_int();
+		for(int j=0; j<numeros.length; j++) {
+			numeros[j]=matriz[j][columna];
+		}
+		burbuja(numeros);
+		for(int i=0; i<numeros.length; i++) {
+			matriz[i][columna]=numeros[i];
+			
+		}
+		System.out.println("la columna "+columna+" ya está ordenada correctamente");
+		imprimirmatrizint(matriz);
+	}
+	
+	public void ordenarcolumnainsersion(int matriz[][]) throws IOException {
+		int columna;
+		int[] numeros =new int[5];
+		System.out.println("Dime la columna que quieres ordenar");
+		columna=e.try_int();
+		for(int j=0; j<numeros.length; j++) {
+			numeros[j]=matriz[j][columna];
+		}
+		insersion(numeros);
+		for(int i=0; i<numeros.length; i++) {
+			matriz[i][columna]=numeros[i];
+			
+		}
+		System.out.println("la columna "+columna+" ya está ordenada correctamente");
+		imprimirmatrizint(matriz);
+	}
+	
 	public void ordenadiagonal(int matriz[][]) {
 		int c=0;
 		int[] numeros =new int[5];

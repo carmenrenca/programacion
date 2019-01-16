@@ -16,7 +16,7 @@ public class ejercicio18 {
 		a.rellenarmatriz(matriz);
 		System.out.println("esta es tu matriz");
 		a.imprimirmatrizint(matriz);
-		a.ordenarunafilamatriz(matriz);
+		a.ordenarunafilamatrizburbuja(matriz);
 	
 		System.out.println("------vamos a ordenar la diagonal------");
 		a.ordenadiagonal(matriz);
