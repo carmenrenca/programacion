@@ -17,10 +17,17 @@ public class ejercicio4 {
 		int o=0;
 		int e=0;
 		
-		System.out.println("Dame una cadena de caracteres");
+		System.out.println("Dame una cadena de caracteres");//le introducimos la frase
 		cadena=excepcion.try_String();
+		/**
+		 * este metodo nos invertira la cadena introducida
+		 */
 s.invertircadena(cadena);
-
+/**
+ * //con este for, lo que hacemos es introduir 
+ * condiciones pasandole las vocales ,a,o,e,
+ *  y esto lo hacemos con el metodo
+ */
 for(int i=0; i<cadena.length(); i++){
 	if(cadena.charAt(i)=='a') {
 		a++;
@@ -32,7 +39,10 @@ for(int i=0; i<cadena.length(); i++){
 	}
 	
 }
-                                                               
+      /**
+       * si se pasa del tamaño establecido en estas
+       * condiciones, dara exceso de esa vocal                                                         
+       */
 System.out.println();
 if(a>10) {
 	System.out.println("Exceso de a");
@@ -41,7 +51,10 @@ if(a>10) {
 }else if(e>3) {
 	System.out.println("Exceso de e");
 }
-
+/**
+ * a continuacon buscaremos una palabra, para comprobar si
+ * esta dentro de nuestra cadena
+ */
 System.out.println("palabra a buscar");
 aux=excepcion.try_String();
 

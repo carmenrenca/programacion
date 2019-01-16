@@ -19,6 +19,7 @@ public class ejercicio10 {
 	static int jpos;
 	static	int c=0;
 	static int barcos=0;
+	//metodo que crea la matriz, que hará de tablero del juego
 	public static void iniciartablero(char matriz[][]) {
 		
 		for (int i=0; i<matriz.length; i++) {
@@ -31,6 +32,12 @@ public class ejercicio10 {
 		
 		
 }
+	/**
+	 * metodo en el que vamos a esconder los barcos, que seran los *,
+	 *  lo vamos a colocar de forma aleatoria gracias a un random
+	 * @param matriz
+	 */
+	
 	
 	public static void escoderbarco(char matriz[][]) {
 
@@ -49,7 +56,16 @@ public class ejercicio10 {
 	}
 	
 	
-	
+	/**
+	 * en el metodo main vamos a llamar al metodo para iniciar el tablero y el otro para esconder
+	 * el barco.
+	 * A continiacion vamos a pedirle al usuario que introduzca una posioción de la matriz, para verificar si esta el barco
+	 * crearemos una condicion para que el usuario no introduzca unas coordenadas erroneas
+	 * Despues de todo esto vamos llamar a nuestro metodo comprobar, que lo que hará sera comprobar si en nuestro coordenada hay un barco
+	 * si esta nos lo imprimirá en el tablero, si no saldra un mensaje de que hemos tocado agua.
+	 * @param args
+	 * @throws IOException
+	 */
 	
 	public static void main(String[] args) throws IOException {
 		trycatch e= new trycatch();

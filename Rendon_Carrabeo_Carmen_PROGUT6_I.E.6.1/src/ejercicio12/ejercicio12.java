@@ -49,13 +49,21 @@ System.out.println(" ");
 	}
 public static void escondopalabra() {
 	int menu;
+	int posX;
+	int posY;
 	String palabra = null;
 	char[] chars = null;
 	for(int i =0; i<lista.length; i++) {
 		palabra=lista[i];
 	chars = palabra.toCharArray();
 	menu=random.nextInt(4);
+	posX = random.nextInt(15);
+
+	posY = random.nextInt(15);
 	switch(menu) {
+	
+
+	
 	case 1: vertical();
 	case 2: 
 	case 3:
@@ -71,8 +79,10 @@ public static void escondopalabra() {
 	
 }
 
-public void vertical() {
-	
+public static void vertical() {
+	char[] auxChar = palabras.get(k).toCharArray();
+
+
 }
 
 
