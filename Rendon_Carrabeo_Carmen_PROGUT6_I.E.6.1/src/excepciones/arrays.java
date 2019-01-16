@@ -1,9 +1,10 @@
 package excepciones;
 
+import java.io.IOException;
 import java.util.Random;
 
 public class arrays {
-
+	static trycatch e= new trycatch();
 	public int[] inviertearray(int array[]) {
 		int invierte[];
 		
@@ -118,6 +119,32 @@ public class arrays {
 			
 			}
 		}
+		public void burbuja(int array[]) {
+			int aux;
+			for(int i=0; i<array.length-1; i++){
+				for(int j=0; j<array.length-1-i; j++) {
+					if(array[j]>array[j+1]) {
+					aux=array[j];
+					array[j]=array[j+1];
+					array[j+1]=aux;
+					}
+				}
+			}
+		}
+		
+		public void insersion(int array[]) {
+			int pos;
+			int aux;
+			for(int i=0; i<array.length; i++) {
+				pos=i;
+				aux=array[i];
+			while(pos>0 && (array[pos-1]>aux)) {
+				array[pos]=array[pos-1];
+				pos--;
+			}
+			array[pos]=aux;
+			}
+		}
 	
 
 	///////////////////////////////////////////////
@@ -131,10 +158,10 @@ public void rellenarmatriz(int matriz[][] ) {
 	}
 }
 		
-	public void  imprimirmatrizint(int array[][]) {
-		for(int i=0; i<array.length; i++) {
-			for(int j=0; j<array[i].length; j++) {
-				System.out.print(array[i][j]+" ");
+	public void  imprimirmatrizint(int matriz[][]) {
+		for(int i=0; i<matriz.length; i++) {
+			for(int j=0; j<matriz[i].length; j++) {
+				System.out.print(matriz[i][j]+" ");
 				
 			}
 			System.out.println(" ");
@@ -167,5 +194,44 @@ public void rellenarmatriz(int matriz[][] ) {
 		}
 		return "el menor es "+menor;
 	}
-	
+	public void ordenarunafilamatriz(int matriz[][]) throws IOException {
+		int fila;
+		int[] numeros =new int[5];
+		System.out.println("Dime la fila que quieres ordenar");
+		fila=e.try_int();
+		for(int j=0; j<numeros.length; j++) {
+			numeros[j]=matriz[fila][j];
+		}
+		burbuja(numeros);
+		for(int i=0; i<numeros.length; i++) {
+			matriz[fila][i]=numeros[i];
+			
+		}
+		System.out.println("la fila "+fila+" ya está ordenada correctamente");
+		imprimirmatrizint(matriz);
+	}
+	public void ordenadiagonal(int matriz[][]) {
+		int c=0;
+		int[] numeros =new int[5];
+		for(int i=0; i<matriz.length; i++) {
+			for(int j=0; j<matriz.length; j++) {
+				if(i==j) {
+					numeros[c]=matriz[i][j];
+					c++;
+				}
+			}
+		}
+		c=0;
+		insersion(numeros);
+		for(int i=0; i<matriz.length; i++) {
+			for(int j=0; j<matriz.length; j++) {
+				if(i==j) {
+					matriz[i][j]=numeros[c];
+							c++;
+				}
+			}
+		}
+		System.out.println("tu diagonal ya esta ordenada");
+		 imprimirmatrizint(matriz);
+	}
 }
