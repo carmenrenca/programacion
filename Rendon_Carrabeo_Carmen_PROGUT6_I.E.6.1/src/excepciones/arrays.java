@@ -754,4 +754,7 @@ public void menordematriz(int matriz[][]) {
 		System.out.println("tu diagonal ya esta ordenada");
 		 imprimirmatrizint(matriz);
 	}
+	
+
+	
 }

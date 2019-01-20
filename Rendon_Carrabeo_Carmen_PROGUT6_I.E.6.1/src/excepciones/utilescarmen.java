@@ -258,6 +258,22 @@ public int ivertirnumero(int  num) {
 		return true;
 
 	}
+public void escapicua(int cadena) {
+	int aux;
+	aux=cadena;
 
-	
+	/**
+	 * metodo que invierte el numero que introducimos por teclado
+	 *
+	 */
+	cadena=ivertirnumero(cadena);
+	if(cadena==aux) {
+		System.out.println("es un numero capicua");
+	}else {
+		System.out.println("no es un numero capicua");
+	}
+
+		}
 }
+	
+

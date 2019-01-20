@@ -10,28 +10,13 @@ public class ejercicio5 {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		trycatch e = new trycatch();
-
+misString s= new misString();
 		String cadena="";
-		String aux ="";
-		/**
-		 * introducimos la cadena
-		 */
-System.out.println("dame una cadena de texto");
+
+System.out.println("dame una palabra");
 cadena=e.try_String();
 
-//recorremos hacia atras la palabra y la guardamos en aux;
-for(int i=cadena.length()-1; i>=0; i--) {
-	aux=aux+cadena.charAt(i);
-	
+
+s.palidromo(cadena);
 }
-
-//comparamos con equals
-if(cadena.equals(aux)) {
-	System.out.println("es un palíndromo");
-}else {
-	System.out.println("no es un palíndromo");
-}
-
-	}
-
 }

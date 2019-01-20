@@ -19,19 +19,8 @@ public class ejercicio9 {
 System.out.println("escribe el numero");
 
 cadena=e.try_int();
-aux=cadena;
 
-/**
- * metodo que invierte el numero que introducimos por teclado
- *
- */
-cadena=u.ivertirnumero(cadena);
-if(cadena==aux) {
-	System.out.println("es un numero capicua");
-}else {
-	System.out.println("no es un numero capicua");
-}
+u.escapicua(cadena);
 
 	}
-
 }

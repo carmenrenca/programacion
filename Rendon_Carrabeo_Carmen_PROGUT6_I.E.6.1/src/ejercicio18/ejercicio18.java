@@ -19,7 +19,7 @@ public class ejercicio18 {
 		
 		a.imprimirmatrizint(matriz);
 		//ordenamos la matriz con el metodo de ordenazión burbuja
-		a.ordenarunafilamatrizburbuja(matriz);
+		a.ordenarfilamatrizinsersionascendente(matriz);
 	//y ahora ordenamos la diagonal llamando al metodo
 		System.out.println("------vamos a ordenar la diagonal------");
 		a.ordenadiagonal(matriz);

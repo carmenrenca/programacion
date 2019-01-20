@@ -49,8 +49,8 @@ public class ejercicio19 {
 			n=e.try_int();
 		}
 		switch(n) {
-		case 1: a.ordenarcolumnaburbuja(matriz);break;
-		case 2: a.ordenarcolumnainsersion(matriz);break;
+		case 1: a.ordenarcolumnaburbujaascendente(matriz);break;
+		case 2: a.ordenarcolumnainsersionascendente(matriz);break;
 		}
 		
 		}

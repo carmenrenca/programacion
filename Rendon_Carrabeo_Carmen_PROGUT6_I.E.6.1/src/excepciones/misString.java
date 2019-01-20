@@ -1,6 +1,7 @@
 package excepciones;
 
 import java.io.IOException;
+import java.util.StringTokenizer;
 
 public class misString {
 	trycatch e= new trycatch();
@@ -70,5 +71,128 @@ public String buscarunapalabra() throws IOException {
 	}
 
 }
+
+public String nif(String s) throws IOException {
+
+	String respuesta=s;
+
+	boolean error = false;
+
+	char c;
+
+	
+
+	do {
+
+		error=false;
+
+		while(respuesta.length()!=9) {
+
+			System.out.println("Longitud del DNI incorrecta, vuelva a introducirlo");
+
+			respuesta=e.try_String();
+
+		}
+
+		for (int i = 0; i < 8; i++) {
+
+			c = respuesta.charAt(i);
+
+			if (!Character.isDigit(c)) {
+
+				error = true;
+
+				break;
+
+			}
+
+		}
+
+		if(!Character.isAlphabetic(respuesta.charAt(8)))
+
+			error=true;
+
+		if (error) {
+
+			System.out.println("DNI no válido. Vuélvalo a introducir");
+
+			respuesta =e.try_String();
+
+		}
+
+	} while (error);
+
+	return respuesta;
+
+}
+
+
+public String compruebaTexto(String s) throws IOException {
+
+	String respuesta=s;
+
+	boolean vacio = true;
+
+	char c;
+
+	do {
+
+		for (int i = 0; i < respuesta.length(); i++) {
+
+			c = respuesta.charAt(i);
+
+			if (!Character.isWhitespace(c)) {
+
+				vacio = false;
+
+				break;
+
+			}
+
+		}
+	if (vacio) {
+
+			System.out.println("El texto no debe estar vacío, introduzca datos");
+
+			respuesta = e.try_String();
+
+		}
+
+	} while (vacio);
+
+	return respuesta;
+
+}
+
+
+
+public void eliminarespacios(String palabra) throws IOException {
+	
+
+	System.out.println(palabra.replace(" ", ""));//con el metodo replace le pasamos por parametros el espacio y como lo queremos camiar, es decir quitando el espacio
+}
+
+
+public void palidromo(String palabra){
+	String aux ="";
+	//recorremos hacia atras la palabra y la guardamos en aux;
+	for(int i=palabra.length()-1; i>=0; i--) {
+		aux=aux+palabra.charAt(i);
+		
+	}
+
+	//comparamos con equals
+	if(palabra.equals(aux)) {
+		System.out.println("es un palíndromo");
+	}else {
+		System.out.println("no es un palíndromo");
+	}
+
+}
+public void Tokenizer(String frase, String delimitador) {
+	StringTokenizer token=new StringTokenizer(frase,delimitador);
+}
+
+
 }
 
