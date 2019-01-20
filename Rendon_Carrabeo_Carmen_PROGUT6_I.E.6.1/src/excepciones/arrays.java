@@ -5,6 +5,10 @@ import java.util.Random;
 
 public class arrays {
 	static trycatch e= new trycatch();
+	
+
+	
+	
 	public int[] inviertearray(int array[]) {
 		int invierte[];
 		
@@ -16,6 +20,13 @@ public class arrays {
 				
 				
 			}
+		for(int i=0; i<array.length; i++) {
+			
+			 array[ i]=invierte[i];
+			
+					
+					
+				}
 		return invierte;
 		}
 	
@@ -28,7 +39,11 @@ public class arrays {
 			
 			
 		}
-		
+		public void imprimearray(int array[]) {
+			for(int i=0; i<array.length; i++) {
+				System.out.print(array[i]+" ");
+			}
+		}
 		public int mayorarray(int array[]){
 			int aux = 0;
 			for(int i=0; i<array.length; i++) {
@@ -38,6 +53,7 @@ public class arrays {
 					aux=aux;
 				}
 			}
+			System.out.println("el mayor es "+aux);
 			return  aux;
 		}
 		public int menorarray(int array[]){
@@ -53,6 +69,7 @@ public class arrays {
 				}
 				aux1=array[i];
 			}
+			System.out.println("el menor es "+aux);
 			return  aux;
 		}
 		public int ordenararray_menor_mayor(int array[]){
@@ -99,7 +116,7 @@ public class arrays {
 			int k=0;
 			int impar=0;
 			for(int h=0; h<array.length; h++){
-				if(array[h]%2==0) {
+				if(array[h]%2!=0) {
 					impar++;
 				}
 			
@@ -107,19 +124,19 @@ public class arrays {
 			impares= new int [impar];
 			for(int i=0; i<array.length; i++) {
 			
-				if(array[i]%2==0) {
+				if(array[i]%2!=0) {
 					impares[k]=array[i];
 					k++;
 				
 				}
 			}
-			System.out.println("los numeros pares son: ");
+			System.out.println("los numeros impares son: ");
 			for(int j=0; j<impares.length; j++) {
 				System.out.print(impares[j]+" ");
 			
 			}
 		}
-		public void burbuja(int array[]) {
+		public void burbuja_ascendente(int array[]) {
 			int aux;
 			for(int i=0; i<array.length-1; i++){
 				for(int j=0; j<array.length-1-i; j++) {
@@ -132,7 +149,20 @@ public class arrays {
 			}
 		}
 		
-		public void insersion(int array[]) {
+		public void burbuja_descendente(int array[]) {
+			int aux;
+			for(int i=0; i<array.length-1; i++){
+				for(int j=0; j<array.length-1-i; j++) {
+					if(array[j]<array[j+1]) {
+					aux=array[j];
+					array[j]=array[j+1];
+					array[j+1]=aux;
+					}
+				}
+			}
+		}
+		
+		public void insersiondrectaascendente(int array[]) {
 			int pos;
 			int aux;
 			for(int i=0; i<array.length; i++) {
@@ -145,6 +175,31 @@ public class arrays {
 			array[pos]=aux;
 			}
 		}
+		public void insersiondrectadescendente(int array[]) {
+			int pos;
+			int aux;
+			for(int i=0; i<array.length; i++) {
+				pos=i;
+				aux=array[i];
+			while(pos>0 && (array[pos-1]<aux)) {
+				array[pos]=array[pos-1];
+				pos--;
+			}
+			array[pos]=aux;
+			}
+		}
+		
+	public void sumaarray(int array[]) {
+		int total=array.length;
+		int a;
+		int b;
+		for(int i=0; i<array.length; i++) {
+			a=array[i];
+			b=array[i+1];
+			array[i]=a+b;
+		}
+	
+	}
 	
 
 	///////////////////////////////////////////////
@@ -202,7 +257,7 @@ public void rellenarmatriz(int matriz[][] ) {
 		for(int j=0; j<numeros.length; j++) {
 			numeros[j]=matriz[fila][j];
 		}
-		burbuja(numeros);
+		burbuja_ascendente(numeros);
 		for(int i=0; i<numeros.length; i++) {
 			matriz[fila][i]=numeros[i];
 			
@@ -218,7 +273,7 @@ public void rellenarmatriz(int matriz[][] ) {
 		for(int j=0; j<numeros.length; j++) {
 			numeros[j]=matriz[fila][j];
 		}
-		insersion(numeros);
+		 insersiondrectaascendente(numeros);
 		for(int i=0; i<numeros.length; i++) {
 			matriz[fila][i]=numeros[i];
 			
@@ -235,7 +290,7 @@ public void rellenarmatriz(int matriz[][] ) {
 		for(int j=0; j<numeros.length; j++) {
 			numeros[j]=matriz[j][columna];
 		}
-		burbuja(numeros);
+		burbuja_ascendente(numeros);
 		for(int i=0; i<numeros.length; i++) {
 			matriz[i][columna]=numeros[i];
 			
@@ -252,7 +307,7 @@ public void rellenarmatriz(int matriz[][] ) {
 		for(int j=0; j<numeros.length; j++) {
 			numeros[j]=matriz[j][columna];
 		}
-		insersion(numeros);
+		 insersiondrectaascendente(numeros);
 		for(int i=0; i<numeros.length; i++) {
 			matriz[i][columna]=numeros[i];
 			
@@ -273,7 +328,7 @@ public void rellenarmatriz(int matriz[][] ) {
 			}
 		}
 		c=0;
-		insersion(numeros);
+		 insersiondrectaascendente(numeros);
 		for(int i=0; i<matriz.length; i++) {
 			for(int j=0; j<matriz.length; j++) {
 				if(i==j) {
