@@ -111,6 +111,33 @@ public class arrays {
 			
 			}
 		}
+		
+		public int contarpares(int array[]) {
+			int cont=0;
+			for(int i=0; i<array.length; i++) {
+				if(array[i]%2==0) {
+					cont++;
+				}
+			}
+			System.out.println("en este vector hay "+cont+" numeros pares");
+			return cont;
+		}
+		
+		public int[] extrerpares(int array[]) {
+			int [] par= new int[contarpares(array)];
+			int c=0;
+			for(int i=0; i<array.length; i++) {
+				if(array[i]%2==0) {
+					par[c]=array[i];
+					c++;
+				}
+			}
+			for(int i=0; i<par.length; i++) {
+				System.out.println(par[i]);	
+			}
+			
+			return par;
+		}
 		public void imparesarray(int array[]) {
 			int impares[];
 			int k=0;
@@ -135,6 +162,32 @@ public class arrays {
 				System.out.print(impares[j]+" ");
 			
 			}
+		}
+		public int  contarimpares(int array[]) {
+			int cont=0;
+			for(int i=0; i<array.length; i++) {
+				if(array[i]%2!=0) {
+					cont++;
+				}
+			}
+			System.out.println("en este vector hay "+cont+" numeros impares");
+			return cont;
+		}
+		
+		public int[] extrerimpares(int array[]) {
+			int [] impar= new int[contarimpares(array)];
+			int c=0;
+			for(int i=0; i<array.length; i++) {
+				if(array[i]%2!=0) {
+					impar[c]=array[i];
+					c++;
+				}
+			}
+			for(int i=0; i<impar.length; i++) {
+				System.out.println(impar[i]);	
+			}
+			
+			return impar;
 		}
 		public void burbuja_ascendente(int array[]) {
 			int aux;
@@ -456,6 +509,32 @@ public void menordematriz(int matriz[][]) {
 		
 	}
 	
+	
+	public int posicionmayorcolumna(int matriz[][]) throws IOException {
+		int columna;
+		System.out.println("dime la columna que quieres coger la posicion del el mayor ");
+		
+		columna=e.try_int();
+		if(columna>=matriz.length) {
+			System.out.println("se pasa de la matriz");
+			columna=e.try_int();
+		}
+		int aux;
+		int pos=0;
+		aux=matriz[0][columna];
+		for(int i=0; i<matriz.length; i++) {
+			
+			if(aux<matriz[i][columna]) {
+				aux=matriz[i][columna];
+				pos=i;
+			}else {
+				aux=aux;
+				pos=pos;			}
+		}
+		return pos;
+		
+	}
+	
 	public void posicionmayormatriz(int matriz[][]) {
 		int fila = 0;
 		int columna = 0;
@@ -497,10 +576,12 @@ public void menordematriz(int matriz[][]) {
 		}
 		System.out.println("la posicion del menor es ("+fila+","+columna+")");
 	}
-	
-	public void ordenarunafilamatrizburbuja(int matriz[][]) throws IOException {
+	//////////////////////////////metodos de ordenacion\\\\\\\\\\\\\\\\\\\\\\\\\
+	public void ordenarfilamatrizburbujaascendete(int matriz[][]) throws IOException {
 		int fila;
-		int[] numeros =new int[5];
+		int total;
+		total=matriz[0].length;
+		int[] numeros =new int[total];
 		System.out.println("Dime la fila que quieres ordenar");
 		fila=e.try_int();
 		for(int j=0; j<numeros.length; j++) {
@@ -514,9 +595,30 @@ public void menordematriz(int matriz[][]) {
 		System.out.println("la fila "+fila+" ya está ordenada correctamente");
 		imprimirmatrizint(matriz);
 	}
-	public void ordenarunafilamatrizinsersion(int matriz[][]) throws IOException {
+	
+	public void ordenarfilamatrizburbujadescente(int matriz[][]) throws IOException {
 		int fila;
-		int[] numeros =new int[5];
+		int total;
+		total=matriz[0].length;
+		int[] numeros =new int[total];
+		System.out.println("Dime la fila que quieres ordenar");
+		fila=e.try_int();
+		for(int j=0; j<numeros.length; j++) {
+			numeros[j]=matriz[fila][j];
+		}
+		burbuja_descendente(numeros);
+		for(int i=0; i<numeros.length; i++) {
+			matriz[fila][i]=numeros[i];
+			
+		}
+		System.out.println("la fila "+fila+" ya está ordenada correctamente");
+		imprimirmatrizint(matriz);
+	}
+	public void ordenarfilamatrizinsersionascendente(int matriz[][]) throws IOException {
+		int fila;
+		int total;
+		total=matriz[0].length;
+		int[] numeros =new int[total];
 		System.out.println("Dime la fila que quieres ordenar");
 		fila=e.try_int();
 		for(int j=0; j<numeros.length; j++) {
@@ -531,9 +633,31 @@ public void menordematriz(int matriz[][]) {
 		imprimirmatrizint(matriz);
 	}
 	
-	public void ordenarcolumnaburbuja(int matriz[][]) throws IOException {
+	
+	public void ordenarfilamatrizinsersiondescendente(int matriz[][]) throws IOException {
+		int fila;
+		int total;
+		total=matriz[0].length;
+		int[] numeros =new int[total];
+		System.out.println("Dime la fila que quieres ordenar");
+		fila=e.try_int();
+		for(int j=0; j<numeros.length; j++) {
+			numeros[j]=matriz[fila][j];
+		}
+		 insersiondrectadescendente(numeros);
+		for(int i=0; i<numeros.length; i++) {
+			matriz[fila][i]=numeros[i];
+			
+		}
+		System.out.println("la fila "+fila+" ya está ordenada correctamente");
+		imprimirmatrizint(matriz);
+	}
+	//ascendente menor a mayor
+	public void ordenarcolumnaburbujaascendente(int matriz[][]) throws IOException {
 		int columna;
-		int[] numeros =new int[5];
+		int total;
+		total=matriz.length;
+		int[] numeros =new int[total];
 		System.out.println("Dime la columna que quieres ordenar");
 		columna=e.try_int();
 		for(int j=0; j<numeros.length; j++) {
@@ -548,9 +672,30 @@ public void menordematriz(int matriz[][]) {
 		imprimirmatrizint(matriz);
 	}
 	
-	public void ordenarcolumnainsersion(int matriz[][]) throws IOException {
+	public void ordenarcolumnaburbujadescendete(int matriz[][]) throws IOException {
 		int columna;
-		int[] numeros =new int[5];
+		int total;
+		total=matriz.length;
+		int[] numeros =new int[total];
+		System.out.println("Dime la columna que quieres ordenar");
+		columna=e.try_int();
+		for(int j=0; j<numeros.length; j++) {
+			numeros[j]=matriz[j][columna];
+		}
+		burbuja_descendente(numeros);
+		for(int i=0; i<numeros.length; i++) {
+			matriz[i][columna]=numeros[i];
+			
+		}
+		System.out.println("la columna "+columna+" ya está ordenada correctamente");
+		imprimirmatrizint(matriz);
+	}
+	
+	public void ordenarcolumnainsersionascendente(int matriz[][]) throws IOException {
+		int columna;
+		int total;
+		total=matriz.length;
+		int[] numeros =new int[total];
 		System.out.println("Dime la columna que quieres ordenar");
 		columna=e.try_int();
 		for(int j=0; j<numeros.length; j++) {
@@ -565,6 +710,26 @@ public void menordematriz(int matriz[][]) {
 		imprimirmatrizint(matriz);
 	}
 	
+	
+	
+	public void ordenarcolumnainsersiondescente(int matriz[][]) throws IOException {
+		int columna;
+		int total;
+		total=matriz.length;
+		int[] numeros =new int[total];
+		System.out.println("Dime la columna que quieres ordenar");
+		columna=e.try_int();
+		for(int j=0; j<numeros.length; j++) {
+			numeros[j]=matriz[j][columna];
+		}
+		 insersiondrectadescendente(numeros);
+		for(int i=0; i<numeros.length; i++) {
+			matriz[i][columna]=numeros[i];
+			
+		}
+		System.out.println("la columna "+columna+" ya está ordenada correctamente");
+		imprimirmatrizint(matriz);
+	}
 	public void ordenadiagonal(int matriz[][]) {
 		int c=0;
 		int[] numeros =new int[5];

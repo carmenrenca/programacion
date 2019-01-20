@@ -9,12 +9,15 @@ public class prueba {
 		
 		arrays a= new arrays();
 		
-		int matriz[][] = new int[3][3];
-		int matriz1[][] = new int[3][3];
-		a.rellenarmatriz(matriz1);
-	
-		a.imprimirmatrizint(matriz1);
-	System.out.println(a.posicionmenorcolumna(matriz1));
+		int matriz[][] = new int[3][6];
+		int array[] = new int [5];
+		a.rellenararray(array);
+	a.imprimearray(array);
+		a.contarpares(array);
+		a.contarimpares(array);
+		a.extrerpares(array);
+		a.extrerimpares(array);
+
 	}
 
 }
