@@ -1,11 +1,11 @@
-package excepciones;
+ package excepciones;
 
 import java.io.IOException;
 import java.util.Random;
 
 public class arrays {
 	static trycatch e= new trycatch();
-	
+	static Random randon= new Random();
 
 	
 	
@@ -32,7 +32,7 @@ public class arrays {
 	
 		public void  rellenararray(int array[]) {
 			
-			Random randon= new Random();
+		
 			for(int i=0; i<array.length; i++) {
 				array[i]=randon.nextInt(100)+1;	
 			}
@@ -189,28 +189,31 @@ public class arrays {
 			}
 		}
 		
-	public void sumaarray(int array[]) {
+	public void sumaarray(int array[],int array2[]) {
 		int total=array.length;
-		int a;
-		int b;
-		for(int i=0; i<array.length; i++) {
-			a=array[i];
-			b=array[i+1];
-			array[i]=a+b;
+		int[] suma =new int[total];
+		for(int i=0; i<suma.length; i++) {
+			suma[i]=array[i]+array[i];
 		}
-	
+	for(int i=0;i< suma.length; i++) {
+		System.out.println(suma[i]);
+	}
 	}
 	
 
 	///////////////////////////////////////////////
 
-public void rellenarmatriz(int matriz[][] ) {
-	Random randon= new Random();
+public int[][]rellenarmatriz(int matriz[][] ) {
+
+	int n;
 	for(int i=0; i<matriz.length; i++) {
-		for(int j=0; j<matriz.length; j++) {
-			matriz[i][j]=randon.nextInt(100);
+		for(int j=0; j<matriz[i].length; j++) {
+			n=randon.nextInt(100);
+			matriz[i][j]=n;
 		}
 	}
+	return matriz;
+
 }
 		
 	public void  imprimirmatrizint(int matriz[][]) {
@@ -233,22 +236,268 @@ public void rellenarmatriz(int matriz[][] ) {
 		}
 	}
 
-	public String menorfila(int matriz[][]) {
-		int menor[] = null;
-		int aux;
-		for(int i=0; i<i; i++) {
-			for(int j=0; j<matriz.length; j++){
+public void sumamatriz(int matriz[][], int matriz1[][]) {
+	
+	int fila=matriz.length; 
+	int columna=matriz[0].length; 
+	int suma[][] = new int[fila][columna];
+	
+	for(int i=0; i<suma.length; i++) {
+		for(int j=0; j<suma[i].length; j++) {
+			suma[i][j]=matriz[i][j]+matriz1[i][j];
+		}
+	}
+	for(int i=0; i<suma.length; i++) {
+		for(int j=0; j<suma[i].length; j++) {
+			System.out.println(suma[i][j]);
+		}
+	}
+}
+public void menordematriz(int matriz[][]) {
+	int aux=matriz[0][0];
+
+	for(int i=0; i<matriz.length; i++) {
+		for(int j=0; j<matriz[i].length; j++) {
+			
+			if(aux>matriz[i][j]) {
 				aux=matriz[i][j];
-				if(menor[j]<aux) {
-					menor[j]=aux;
-				}else {
-					menor[j]=menor[j];
-				}
-				
+			}else {
+				aux=aux;
 			}
 		}
-		return "el menor es "+menor;
+		
+		
 	}
+	System.out.println("el menor en la matriz es "+aux);
+}
+	public void mayodematriz(int matriz[][]) {
+		int aux=matriz[0][0];
+
+		for(int i=0; i<matriz.length; i++) {
+			for(int j=0; j<matriz[i].length; j++) {
+				
+				if(aux<matriz[i][j]) {
+					aux=matriz[i][j];
+				}else {
+					aux=aux;
+				}
+			}
+			
+			
+		}
+		System.out.println("el mayor en la matriz es "+aux);
+	}
+	public int menordelafila( int matriz[][]) throws IOException {
+		int fila;
+		System.out.println("dime la fila que quieres coger el menor ");
+		
+		fila=e.try_int();
+		if(fila>=matriz.length) {
+			System.out.println("se pasa de la matriz");
+			fila=e.try_int();
+		}
+		int aux;
+		aux=matriz[fila][0];
+		for(int i=0; i<matriz.length; i++) {
+			
+			if(aux>matriz[fila][i]) {
+				aux=matriz[fila][i];
+			}else {
+				aux=aux;
+			}
+		}
+		return aux;
+		
+	}
+	
+	public int posicionmenorfila(int matriz[][]) throws IOException {
+		int fila;
+		int pos = 0;
+
+		System.out.println("dime la fila para coger la posicion del menor ");
+		
+		fila=e.try_int();
+		if(fila>=matriz.length) {
+			System.out.println("se pasa de la matriz");
+			fila=e.try_int();
+		}
+		int aux;
+		aux=matriz[fila][0];
+		for(int i=0; i<matriz.length; i++) {
+			
+			if(aux>matriz[fila][i]) {
+				aux=matriz[fila][i];
+				pos=i;
+			}else {
+				aux=aux;
+				pos=pos;
+			}
+	
+	}
+		return pos;
+	}
+	public int mayordelafila( int matriz[][]) throws IOException {
+		int fila;
+		System.out.println("dime la fila que quieres coger el mayor ");
+		
+		fila=e.try_int();
+		if(fila>=matriz.length) {
+			System.out.println("se pasa de la matriz");
+			fila=e.try_int();
+		}
+		int aux;
+		aux=matriz[fila][0];
+		for(int i=0; i>matriz.length; i++) {
+			
+			if(aux>matriz[fila][i]) {
+				aux=matriz[fila][i];
+			}else {
+				aux=aux;
+			}
+		}
+		return aux;
+		
+	}
+	public int posicionmayorfila(int matriz[][]) throws IOException {
+		int fila;
+		int pos = 0;
+
+		System.out.println("dime la fila para coger la posicion del mayor ");
+		
+		fila=e.try_int();
+		if(fila>=matriz.length) {
+			System.out.println("se pasa de la matriz");
+			fila=e.try_int();
+		}
+		int aux;
+		aux=matriz[fila][0];
+		for(int i=0; i<matriz.length; i++) {
+			
+			if(aux<matriz[fila][i]) {
+				aux=matriz[fila][i];
+				pos=i;
+			}else {
+				aux=aux;
+				pos=pos;
+			}
+	
+	}
+		return pos;
+	}
+	
+	public int menordelacolumna( int matriz[][]) throws IOException {
+		int columna;
+		System.out.println("dime la columna que quieres coger el menor ");
+		
+		columna=e.try_int();
+		if(columna>=matriz.length) {
+			System.out.println("se pasa de la matriz");
+			columna=e.try_int();
+		}
+		int aux;
+		aux=matriz[0][columna];
+		for(int i=0; i<matriz.length; i++) {
+			
+			if(aux>matriz[i][columna]) {
+				aux=matriz[i][columna];
+			}else {
+				aux=aux;
+			}
+		}
+		return aux;
+		
+	}
+	
+	
+	public int posicionmenorcolumna(int matriz[][]) throws IOException {
+		int columna;
+		System.out.println("dime la columna que quieres coger el menor ");
+		
+		columna=e.try_int();
+		if(columna>=matriz.length) {
+			System.out.println("se pasa de la matriz");
+			columna=e.try_int();
+		}
+		int aux;
+		int pos=0;
+		aux=matriz[0][columna];
+		for(int i=0; i<matriz.length; i++) {
+			
+			if(aux>matriz[i][columna]) {
+				aux=matriz[i][columna];
+				pos=i;
+			}else {
+				aux=aux;
+				pos=pos;			}
+		}
+		return pos;
+		
+	}
+	public int mayordelacolumna( int matriz[][]) throws IOException {
+		int columna;
+		System.out.println("dime la columna que quieres coger el mayor ");
+		
+		columna=e.try_int();
+		if(columna>=matriz.length) {
+			System.out.println("se pasa de la matriz");
+			columna=e.try_int();
+		}
+		int aux;
+		aux=matriz[0][columna];
+		for(int i=0; i<matriz.length; i++) {
+			
+			if(aux<matriz[i][columna]) {
+				aux=matriz[i][columna];
+			}else {
+				aux=aux;
+			}
+		}
+		return aux;
+		
+	}
+	
+	public void posicionmayormatriz(int matriz[][]) {
+		int fila = 0;
+		int columna = 0;
+		int aux=matriz[0][0];
+		int i, j = 0;
+		for( i=0; i<matriz.length; i++) {
+			for( j=0; j<matriz.length; j++) {
+				if(aux<matriz[i][j]) {
+					aux=matriz[i][j];
+					fila=i;
+					columna=j;
+				}else {
+					aux=aux;
+					fila=fila;
+					columna=columna;
+				}
+			}
+		}
+		System.out.println("la posicion del mayor es ("+fila+","+columna+")");
+	}
+	
+	public void posicionmenormatriz(int matriz[][]) {
+		int fila = 0;
+		int columna = 0;
+		int aux=matriz[0][0];
+		int i, j = 0;
+		for( i=0; i<matriz.length; i++) {
+			for( j=0; j<matriz.length; j++) {
+				if(aux>matriz[i][j]) {
+					aux=matriz[i][j];
+					fila=i;
+					columna=j;
+				}else {
+					aux=aux;
+					fila=fila;
+					columna=columna;
+				}
+			}
+		}
+		System.out.println("la posicion del menor es ("+fila+","+columna+")");
+	}
+	
 	public void ordenarunafilamatrizburbuja(int matriz[][]) throws IOException {
 		int fila;
 		int[] numeros =new int[5];
