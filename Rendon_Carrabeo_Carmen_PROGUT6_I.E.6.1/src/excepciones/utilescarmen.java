@@ -7,12 +7,7 @@ import java.io.InputStreamReader;
 public class utilescarmen {
 	BufferedReader teclado=new BufferedReader(new InputStreamReader(System.in));
 
-	
-	
-	
-	
-	
-	
+arrays s= new arrays();	
 	boolean aux;
 	
 	public static int CalculaFactorial(int num) {
@@ -274,6 +269,79 @@ public void escapicua(int cadena) {
 	}
 
 		}
+
+/**
+
+ * Método público que imprime una matriz en caracol
+
+ * @param tamanho Tamaño de la matriz caracol.
+
+ * @param contador Número inicial por el cual empieza la Matriz Caracol
+
+ * */
+
+public void Caracol (int tamanho, int contador) {
+
+
+
+		int principio=0; // Variable inicial, para llevar la cuenta de los límites
+
+		int fin=tamanho-1; //Variable inicial sobre el final, para llevar la cuenta de los límites
+
+		int[][] matriz=new int[tamanho][tamanho]; //Matriz cuadrada. 
+
+		
+
+		for (int j = 0; j <=tamanho/2; j++) { //Mientras el contador no sea igual al 
+
+											//cuadrado del tamaño, repite el bucle
+
+			
+
+			
+
+			for (int i = principio; i <= fin; i++) {	//El primer for, va de izda a dcha,
+
+				matriz[principio][i]=contador++;		//en las filas superiores.
+
+			}
+
+			
+
+			
+
+			for (int i = principio+1; i <= fin; i++) { //El segundo for, de arriba a abajo, 
+
+				matriz[i][fin]=contador++;			  //en las columnas a la derecha.
+
+			}
+
+			
+
+			
+
+			for (int i = fin-1; i >=principio; i--) { //El tercer for, de dcha a izda
+
+				matriz[fin][i]=contador++;			 //en la filas inferiores.
+
+			}
+
+
+			for (int i = fin-1; i >=principio+1; i--) { //El último for, va de abajo a arriba
+
+				matriz[i][principio]=contador++;	   //en las columnas de la izquierda
+
+			}
+
+			principio++; //Aumentamos el principio en uno, para comenzar uno después
+
+			fin--; //Reducimos el final para acabar uno antes
+
+		}
+s.imprimirmatrizint(matriz);
+		
+
+}
 }
 	
 
