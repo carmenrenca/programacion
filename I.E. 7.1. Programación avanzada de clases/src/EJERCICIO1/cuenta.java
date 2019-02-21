@@ -5,12 +5,14 @@ import java.io.IOException;
 import excepciones.trycatch;
 
 public abstract class cuenta {
-private int numerocuenta;
-private double saldocuenta;
-private Persona cliente;
+ int numerocuenta;
+double saldocuenta;
+ Persona cliente;
 
 trycatch e= new trycatch();
-
+public cuenta() {
+	
+}
 public cuenta (int numerocuenta, Persona cliente) {
 	this.numerocuenta=numerocuenta;
 	this.cliente=cliente;
