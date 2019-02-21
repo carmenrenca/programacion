@@ -7,7 +7,7 @@ import excepciones.trycatch;
 public abstract class cuenta {
  int numerocuenta;
 double saldocuenta;
- Persona cliente;
+ static Persona cliente;
 
 trycatch e= new trycatch();
 public cuenta() {

@@ -2,12 +2,22 @@ package EJERCICIO1;
 
 public class cuenta_corrriente extends cuenta {
 	
-	
 	Double interes;
-	public cuenta_corrriente(int numerocuenta, double saldocuenta, Persona cliente) {
+
+	
+
+	public cuenta_corrriente() {
+		super();
+	}
+
+
+
+	public cuenta_corrriente(int numerocuenta, double saldocuenta, String nombre, String apellidos, String nif) {
 		super(numerocuenta, saldocuenta, cliente);
 		// TODO Auto-generated constructor stub
-		
+		cliente.Nombre=nombre;
+		cliente.apellidos=apellidos;
+		cliente.NIF=nif;
 	}
 	
 	
@@ -31,6 +41,12 @@ public class cuenta_corrriente extends cuenta {
 		this.saldocuenta=saldocuenta+interes;
 		
 	}
+	
+
+   public String ToString(){
+	return "Numero cuenta "+this.numerocuenta+" saldo: "+saldocuenta+"Nombre cliente: "+cliente.Nombre+" apellidos"+cliente.apellidos+"NIF"+cliente.NIF;
+	   
+   }
 
 
 	

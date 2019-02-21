@@ -1,8 +1,8 @@
 package EJERCICIO1;
 
 public class Persona {
-private String Nombre;
-private String apellidos;
+ String Nombre;
+ String apellidos;
 String NIF;
 public Persona(String nombre, String apellidos, String nIF) {
 	super();
