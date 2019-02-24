@@ -72,9 +72,12 @@ public String buscarunapalabra() throws IOException {
 
 }
 
-public String nif(String s) throws IOException {
+public String nif() throws IOException {
+	String NIF;
+System.out.println("introduce el dni");
 
-	String respuesta=s;
+NIF=e.try_String();
+	String respuesta=NIF;
 
 	boolean error = false;
 

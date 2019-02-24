@@ -53,7 +53,7 @@ public abstract void actualizarsaldo();
 
 
 public String ToString(){
-	return "Numero cuenta "+this.numerocuenta+" saldo: "+saldocuenta+"Nombre cliente: "+cliente.getNombre()+" apellidos"+cliente.getApellidos()+" NIF"+cliente.getNIF();
+	return "Numero cuenta "+this.numerocuenta+" saldo: "+saldocuenta+" Nombre cliente: "+cliente.getNombre()+" apellidos: "+cliente.getApellidos()+" NIF: " +cliente.getNIF();
 	   
 }
 public double getInteres() {

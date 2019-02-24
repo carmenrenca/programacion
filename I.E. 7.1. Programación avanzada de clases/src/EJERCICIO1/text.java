@@ -7,12 +7,14 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import excepciones.misString;
 import excepciones.trycatch;
 
 
 public class text {
 	static HashMap<Integer, cuenta> cuentas = new HashMap<Integer, cuenta>();
 	static trycatch e = new trycatch();
+	static misString s = new misString();
 	static 	int cont = 0;
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
@@ -70,7 +72,7 @@ case 7:
 		System.out.println("apellido del cliente");
 		apellidos=e.try_String();
 		System.out.println("NIF del cliente");
-		NIF=e.try_String();
+		NIF=s.nif();
 		System.out.println();
 		Persona p= new Persona(nombre,apellidos,NIF);
 		cuenta_corrriente c= new cuenta_corrriente(cont,p);
@@ -92,7 +94,7 @@ case 7:
 		System.out.println("apellido del cliente");
 		apellidos=e.try_String();
 		System.out.println("NIF del cliente");
-		NIF=e.try_String();
+		NIF=s.nif();
 		System.out.println();
 		Persona p= new Persona(nombre,apellidos,NIF);
 		cuenta_ahorro ch= new cuenta_ahorro(cont,p);
