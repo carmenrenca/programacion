@@ -7,7 +7,8 @@ import excepciones.trycatch;
 public abstract class cuenta {
  int numerocuenta;
 double saldocuenta;
- static Persona cliente;
+ Persona cliente;
+ double interes;
 
 trycatch e= new trycatch();
 public cuenta() {
@@ -18,13 +19,7 @@ public cuenta (int numerocuenta, Persona cliente) {
 	this.cliente=cliente;
 }
 
-public cuenta(int numerocuenta, double saldocuenta, Persona cliente) {
-	super();
-	this.numerocuenta = numerocuenta;
-	this.saldocuenta = saldocuenta;
-	this.cliente = cliente;
-	
-}
+
 
 public int getNumerocuenta() {
 	return numerocuenta;
@@ -45,17 +40,28 @@ public void setCliente(Persona cliente) {
 	this.cliente = cliente;
 }
 
-public double ingreso() throws IOException {
-	double ingreso;
-System.out.println("cuanto deseas ingresar");	
-ingreso=e.try_double();
+public double ingreso(double ingreso) throws IOException {
+
 this.saldocuenta=saldocuenta+ingreso;
 return ingreso;
 }
 
 public abstract void retirar (double retirar);
 
-public abstract void actualizarsaldo ();
+public abstract void actualizarsaldo();
+
+
+
+public String ToString(){
+	return "Numero cuenta "+this.numerocuenta+" saldo: "+saldocuenta+"Nombre cliente: "+cliente.getNombre()+" apellidos"+cliente.getApellidos()+" NIF"+cliente.getNIF();
+	   
+}
+public double getInteres() {
+	return interes;
+}
+public void setInteres(double interes) {
+	this.interes = interes;
+}
 
 
 

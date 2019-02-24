@@ -10,6 +10,8 @@ public Persona(String nombre, String apellidos, String nIF) {
 	this.apellidos = apellidos;
 	NIF = nIF;
 }
+
+
 public String getNombre() {
 	return Nombre;
 }

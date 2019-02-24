@@ -1,25 +1,15 @@
 package EJERCICIO1;
 
+import java.io.IOException;
+
 public class cuenta_corrriente extends cuenta {
 	
 	Double interes;
 
-	
-
-	public cuenta_corrriente() {
-		super();
+	public cuenta_corrriente(int numerocuenta, Persona cliente) {
+		super(numerocuenta, cliente);
+		this.numerocuenta=numerocuenta;
 	}
-
-
-
-	public cuenta_corrriente(int numerocuenta, double saldocuenta, String nombre, String apellidos, String nif) {
-		super(numerocuenta, saldocuenta, cliente);
-		// TODO Auto-generated constructor stub
-		cliente.Nombre=nombre;
-		cliente.apellidos=apellidos;
-		cliente.NIF=nif;
-	}
-	
 	
 	
 	@Override
@@ -39,14 +29,11 @@ public class cuenta_corrriente extends cuenta {
 		// TODO Auto-generated method stub
 		this.interes=(this.saldocuenta*1.5)/100;
 		this.saldocuenta=saldocuenta+interes;
-		
+		System.out.println("saldo "+this.saldocuenta);
 	}
 	
+	
 
-   public String ToString(){
-	return "Numero cuenta "+this.numerocuenta+" saldo: "+saldocuenta+"Nombre cliente: "+cliente.Nombre+" apellidos"+cliente.apellidos+"NIF"+cliente.NIF;
-	   
-   }
 
 
 	
