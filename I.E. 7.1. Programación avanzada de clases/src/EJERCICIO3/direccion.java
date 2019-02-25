@@ -1,10 +1,11 @@
 package EJERCICIO3;
 
 public class direccion {
-String calle;
-String ciudad;
-String cp;
-String pais;
+private String calle;
+private String ciudad;
+private String cp;
+private String pais;
+
 
 
 
