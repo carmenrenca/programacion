@@ -7,11 +7,14 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import EJERCICIO2.usuarios;
 import excepciones.misString;
 import excepciones.trycatch;
 
 
 public class text {
+	public static ArrayList<usuarios> usuario = new ArrayList<usuarios>();
+
 	static HashMap<Integer, cuenta> cuentas = new HashMap<Integer, cuenta>();
 	static trycatch e = new trycatch();
 	static misString s = new misString();

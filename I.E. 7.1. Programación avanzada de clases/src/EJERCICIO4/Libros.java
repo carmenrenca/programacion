@@ -1,5 +1,7 @@
 package EJERCICIO4;
 
+import java.sql.Date;
+
 public class Libros extends datos implements interfaz {
 
 	public Libros(int codigo, String titulo, int año, boolean prestado) {
@@ -8,14 +10,22 @@ public class Libros extends datos implements interfaz {
 		prestado= false;
 	}
 
-	boolean prestado;
+	boolean prestado= false;
 
 	
+	public boolean isPrestado() {
+		return prestado;
+	}
+
+	public void setPrestado(boolean prestado) {
+		this.prestado = prestado;
+	}
+
 	@Override
 	public void prestar() {
 	 if(prestado==false) {
 		 prestado=true;
-		 System.out.println("El libro: "+this.getTitulo()+" puede ser prestado");
+		 System.out.println("El libro: "+this.getTitulo()+" ha sido prestaso");
 	 }else {
 		 System.out.println("El libro: "+this.getTitulo()+" no esta disponible");
 	 }
@@ -30,14 +40,14 @@ public class Libros extends datos implements interfaz {
 	}
 
 	@Override
-	public void prestado() {
-		if(prestado==false) {
-			System.out.println("no esta prestado");
-			
-		}else {
-			System.out.println("ese libro esta ya prestado");
-		}
-
+	public boolean prestado() {
+	if(prestado == true) {
+		return prestado;
 	}
+	return prestado;
+       
+	}
+
+
 	
 }

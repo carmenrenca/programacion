@@ -4,6 +4,8 @@ public class datos {
 private int codigo;
 private String titulo;
 private int año;
+
+
 public datos(int codigo, String titulo, int año) {
 	super();
 	this.codigo = codigo;
@@ -40,4 +42,5 @@ public String año() {
 public String codigo() {
 	return "años de publicacion; "+getCodigo();
 }
+
 }
