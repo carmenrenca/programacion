@@ -26,4 +26,13 @@ public double getAltura() {
 public void setAltura(double altura) {
 	this.altura = altura;
 }
+
+public boolean compararescultura(esculturas e) {
+	if(this.titulo==e.titulo && this.autor==e.autor && this.año==e.año && this.material==e.material && this.altura==e.altura) {
+		return true;
+		
+	}else {
+		return false;
+	}
+}
 }

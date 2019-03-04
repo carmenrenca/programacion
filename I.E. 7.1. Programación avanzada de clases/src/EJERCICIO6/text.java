@@ -27,10 +27,11 @@ System.out.println("1 añade obra");
 n=e.try_int();
 switch(n) {
 case 1: 
-	añadirobra();
+	añadirobra();break;
 }
 			
 	}while(n!=0);
+		
 	}
 	
 	
@@ -40,7 +41,7 @@ case 1:
 		String autor;
 		int año;
 		int n;
-	
+		boolean error=false;;
 		System.out.println("1 crear una pintura");
 		System.out.println("2 crear una esculcura");
 		n= e.try_int();
@@ -65,22 +66,29 @@ case 1:
 			ancho=e.try_int();
 			System.out.println("soportes");
 			soportes=e.try_String();
+			pinturas a = new pinturas("las meninas", 987,"velazquez",1999,123,123,"123");
+			pinturas b = new pinturas("las meninas", 987,"velazquez",1999,123,123,"123");
 			pinturas p = new pinturas(titulo, numeroinventario,autor,año,ancho,alto,soportes);
+			obras.put(numeroinventario, a);
+			obras.put(numeroinventario, b);
 				if(obras.containsKey(numeroinventario)) {
 					System.out.println("no se puden repetir las key");
 				}else {
 					for(Map.Entry<Integer, obras> pintura: obras.entrySet()) {
 						if(pintura instanceof pinturas) {
-							System.out.println("prieba");
-							if(((pinturas) pintura.getValue()).comapararpinturas(p)==true ){
+						
+							if(((pinturas) pintura. getValue()).comapararpinturas(p)==true ){
 								System.out.println("es una falsificacion");
-							}else {
-								System.out.println("creado");
-							 obras.put(numeroinventario, p);
+								error=true;
 							}
 						}
 						
 					}
+					
+				}
+				if(error==false) {
+					System.out.println("creado");
+					 obras.put(numeroinventario, p);
 				}
 		}
 

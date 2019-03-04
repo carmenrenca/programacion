@@ -27,7 +27,7 @@ double importe;
 	}
 	@Override
 	public double calcularsueldo() {
-		// TODO Auto-generated method stub
+
 		return this.sueldo+comision();
 	}
 	public double comision() {
