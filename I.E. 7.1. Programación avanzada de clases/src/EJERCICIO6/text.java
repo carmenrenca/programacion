@@ -66,22 +66,22 @@ case 1:
 			ancho=e.try_int();
 			System.out.println("soportes");
 			soportes=e.try_String();
-			pinturas a = new pinturas("las meninas", 987,"velazquez",1999,123,123,"123");
-			pinturas b = new pinturas("las meninas", 987,"velazquez",1999,123,123,"123");
+		
 			pinturas p = new pinturas(titulo, numeroinventario,autor,año,ancho,alto,soportes);
-			obras.put(numeroinventario, a);
-			obras.put(numeroinventario, b);
-				if(obras.containsKey(numeroinventario)) {
+			
+		
+				if(obras.containsKey(numeroinventario)){
 					System.out.println("no se puden repetir las key");
-				}else {
+					error=true;
+				}else if(error==false){
 					for(Map.Entry<Integer, obras> pintura: obras.entrySet()) {
-						if(pintura instanceof pinturas) {
 						
-							if(((pinturas) pintura. getValue()).comapararpinturas(p)==true ){
+						
+							if(((pinturas) pintura.getValue()).comapararpinturas(p)==true ){
 								System.out.println("es una falsificacion");
 								error=true;
 							}
-						}
+						
 						
 					}
 					
@@ -89,9 +89,48 @@ case 1:
 				if(error==false) {
 					System.out.println("creado");
 					 obras.put(numeroinventario, p);
+				}break;
+		case 2: 
+			String material;
+			double altura;
+			titulo=e.try_String();
+			System.out.println("numero de inventario");
+			numeroinventario=e.try_int();
+				
+			System.out.println("autor");
+			autor=e.try_String();
+			System.out.println("año");
+			año=e.try_int();
+			System.out.println("material");
+			material=e.try_String();
+			System.out.println("altura");
+			altura=e.try_double();
+			esculturas es = new esculturas(titulo,numeroinventario,autor,año,material,altura);
+			if(obras.containsKey(numeroinventario)){
+				System.out.println("no se puden repetir las key");
+				error=true;}else if(error==false){
+					for(Map.Entry<Integer, obras> escultura: obras.entrySet()) {
+						
+						if(escultura instanceof esculturas) {
+							if(((esculturas)escultura.getValue()).compararescultura(es)==true ){
+								System.out.println("es una falsificacion");
+								error=true;
+							}
+						}
+					
+					
+					
 				}
+				
+			}if(error==false) {
+				System.out.println("creado");
+				 obras.put(numeroinventario, es);
+			}
+			
 		}
 
 	}
+	
+
 
 }
