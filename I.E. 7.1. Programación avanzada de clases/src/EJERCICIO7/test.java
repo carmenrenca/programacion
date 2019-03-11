@@ -56,7 +56,7 @@ default: System.out.println("Numero incorrecto");
 			NSS=e.try_int();
 			System.out.println("Salario Semanal");
 			salariosemanal=e.try_double();
-			Empleado emA= new Asalariado(nombre,apellido,NSS,salariosemanal);
+			Asalariado emA= new Asalariado(nombre,apellido,NSS,salariosemanal);
 			list.put(NSS, emA);break;
 		case 2: 
 			double sueldo;
@@ -71,7 +71,7 @@ default: System.out.println("Numero incorrecto");
 			sueldo=e.try_double();
 			System.out.println("Horas");
 			horas=e.try_int();
-			Empleado emH= new PorHoras(nombre,apellido,NSS,sueldo,horas);
+			PorHoras emH= new PorHoras(nombre,apellido,NSS,sueldo,horas);
 			if(list.containsKey(NSS)) {
 				System.out.println("ese numero de seguro social ya existe");
 			}else {
@@ -92,7 +92,7 @@ default: System.out.println("Numero incorrecto");
 			ventasBrutas=e.try_double();
 			System.out.println("Tarifa de Comision");
 			tarifaComision=e.try_double();
-			Empleado emC= new PorComision(nombre, apellido,NSS,ventasBrutas,tarifaComision);
+			PorComision emC= new PorComision(nombre, apellido,NSS,ventasBrutas,tarifaComision);
 			if(list.containsKey(NSS)) {
 				System.out.println("Ya existe ese número de seguro social");
 			}else {
