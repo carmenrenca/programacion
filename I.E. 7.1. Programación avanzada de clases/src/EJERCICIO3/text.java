@@ -13,6 +13,15 @@ public class text {
 	static ArrayList<Persona> personas = new ArrayList<Persona>();
 static trycatch e= new trycatch();
 static misString s= new misString();
+
+static String nombre;
+static String apellido;
+static String dni;
+static String calle;
+static String ciudad;
+static String cp;
+static String pais;
+static String despacho;
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		int n;
@@ -41,9 +50,7 @@ case 4:
 	}
 
 	public static void crearalumno() throws IOException {
-		String nombre;
-		String apellido;
-		String dni;
+	
 		int id;
 		
 		System.out.println("nombre");
@@ -53,15 +60,24 @@ case 4:
 		dni=s.nif();
 		System.out.println("id");
 		id=e.try_int();
-		estudiante es = new estudiante(nombre,apellido,dni, id);
+		System.out.println("calle");
+		calle=e.try_String();
+		System.out.println("Ciudad");
+			ciudad=e.try_String();
+		System.out.println("codigo postal");
+		cp=e.try_String();
+		System.out.println("Pais");
+		pais=e.try_String();
+		direccion d = new direccion(calle,ciudad,cp,pais);
+		estudiante es = new estudiante(nombre,apellido,dni, id, d);
+
+		
 		System.out.println("Estudiante creado con exito");
 		personas.add(es);
 	}
 	public static void crearprofesor() throws IOException {
-		String nombre;
-		String apellido;
-		String dni;
-		String despacho;
+
+		
 		System.out.println("nombre");
 		nombre=e.try_String();
 		System.out.println("apellido");
@@ -69,7 +85,16 @@ case 4:
 		dni=s.nif();
 		System.out.println("despacho");
 		despacho=e.try_String();
-	profesor p= new profesor(nombre, apellido, dni,despacho);
+		System.out.println("calle");
+		calle=e.try_String();
+		System.out.println("Ciudad");
+			ciudad=e.try_String();
+		System.out.println("codigo postal");
+		cp=e.try_String();
+		System.out.println("Pais");
+		pais=e.try_String();
+		direccion d = new direccion(calle,ciudad,cp,pais);
+	profesor p= new profesor(nombre, apellido, dni,despacho,d);
 	personas.add(p);
 	
 	}

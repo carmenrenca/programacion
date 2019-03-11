@@ -1,16 +1,23 @@
 package EJERCICIO3;
 
+import java.io.IOException;
+
+import excepciones.trycatch;
+
 public class Persona implements humano {
  String Nombre;
  String apellidos;
 String NIF;
-private direccion direccion;
+trycatch e= new trycatch();
+protected static direccion direccion;
 
-public Persona(String nombre, String apellidos, String nIF) {
+public Persona(String nombre, String apellidos, String nIF, direccion direccion) {
 	super();
 	Nombre = nombre;
 	this.apellidos = apellidos;
 	NIF = nIF;
+	this.direccion=direccion;
+	
 }
 
 

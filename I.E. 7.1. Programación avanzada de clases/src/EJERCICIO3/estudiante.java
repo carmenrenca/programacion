@@ -6,9 +6,11 @@ int id;
 
 
 
-public estudiante(String nombre, String apellidos, String nIF, int id) {
-	super(nombre, apellidos, nIF);
+public estudiante(String nombre, String apellidos, String nIF, int id, direccion direccion) {
+	super(nombre, apellidos, nIF, direccion);
 	this.id = id;
+
+	
 }
 
 public int getId() {
@@ -24,7 +26,7 @@ public String identificate() {
 }
 
 public String To_String() {
-	return identificate()+" Nombre: "+this.apellidos+" Apellido: "+apellidos+" NIF: "+NIF+" id: "+id; 
+	return identificate()+" Nombre: "+this.apellidos+" Apellido: "+apellidos+" NIF: "+NIF+" id: "+id+"\n"+" Direccion: calle:"+this.getDireccion().getCalle()+" Pais: "+this.getDireccion().getPais()+" Ciudad: "+this.getDireccion().getCiudad()+" Codigo Postal: "+this.getDireccion().getCp(); 
 }
 
 

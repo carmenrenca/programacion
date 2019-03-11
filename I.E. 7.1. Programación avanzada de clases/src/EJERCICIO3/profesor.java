@@ -6,8 +6,8 @@ String despacho;
 
 
 
-public profesor(String nombre, String apellidos, String nIF, String despacho) {
-	super(nombre, apellidos, nIF);
+public profesor(String nombre, String apellidos, String nIF, String despacho, direccion direccion) {
+	super(nombre, apellidos, nIF, direccion);
 	this.despacho = despacho;
 }
 
@@ -19,7 +19,7 @@ public void setDespacho(String despacho) {
 	this.despacho = despacho;
 }
 public String To_String() {
-	return identificate()+" Nombre: "+this.Nombre+" Apellido: "+apellidos+" NIF: "+NIF+" despacho"+despacho; 
+	return identificate()+" Nombre: "+this.Nombre+" Apellido: "+apellidos+" NIF: "+NIF+" despacho"+despacho+"\n"+" Direccion: calle:"+this.getDireccion().getCalle()+" Pais: "+this.getDireccion().getPais()+" Ciudad: "+this.getDireccion().getCiudad()+" Codigo Postal: "+this.getDireccion().getCp(); 
 }
 
 public String identificate() {
