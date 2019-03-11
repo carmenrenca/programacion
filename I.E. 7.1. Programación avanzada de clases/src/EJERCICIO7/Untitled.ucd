@@ -1,0 +1,501 @@
+<?xml version="1.0" standalone="yes" ?>
+<diagram>
+    <title>Untitled</title>
+    <DiagramType>Class Diagram</DiagramType>
+    <Version>3.2</Version>
+    <valuesFileName />
+    <elements num="9">
+        <element>
+            <type>UMLCLASS</type>
+            <description>Clase Abstracta&#x0A;</description>
+            <bgrColor R="128" G="255" B="128" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>1</objId>
+            <ptul X="419" Y="60" />
+            <ptdr X="600" Y="208" />
+            <links num="3">
+                <link id="6" />
+                <link id="7" />
+                <link id="8" />
+            </links>
+            <name>Empleado</name>
+            <stereotype />
+            <constraint />
+            <showAttributes />
+            <showMethods />
+            <attributes num="3">
+                <attribute>
+                    <name>Apellido</name>
+                    <stereotype />
+                    <constraint />
+                    <type>string</type>
+                    <defValue />
+                    <vis>Private</vis>
+                    <description />
+                </attribute>
+                <attribute>
+                    <name>Nombre</name>
+                    <stereotype />
+                    <constraint />
+                    <type>string</type>
+                    <defValue />
+                    <vis>Private</vis>
+                    <description />
+                </attribute>
+                <attribute>
+                    <name>Seguro_Social</name>
+                    <stereotype />
+                    <constraint />
+                    <type>string</type>
+                    <defValue />
+                    <vis>Private</vis>
+                    <description />
+                </attribute>
+            </attributes>
+            <operations num="4">
+                <operation>
+                    <name>ingresos</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <vis>Public</vis>
+                    <abstract />
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>toString</name>
+                    <stereotype />
+                    <constraint />
+                    <type>string</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>getSalarioSemanal</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>setSalarioSemanal</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+            </operations>
+        </element>
+        <element>
+            <type>UMLCLASS</type>
+            <description />
+            <bgrColor R="128" G="255" B="128" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>5</objId>
+            <ptul X="774" Y="547" />
+            <ptdr X="932" Y="631" />
+            <links num="1">
+                <link id="10" />
+            </links>
+            <name>BasesMasComision</name>
+            <stereotype />
+            <constraint />
+            <showAttributes />
+            <showMethods />
+            <attributes num="1">
+                <attribute>
+                    <name>sueldobase</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <defValue />
+                    <vis>Private</vis>
+                    <description />
+                </attribute>
+            </attributes>
+            <operations num="2">
+                <operation>
+                    <name>getSueldobase</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>setSueldobase</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+            </operations>
+        </element>
+        <element>
+            <type>UMLCLASS</type>
+            <description />
+            <bgrColor R="128" G="255" B="128" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>4</objId>
+            <ptul X="766" Y="326" />
+            <ptdr X="941" Y="490" />
+            <links num="2">
+                <link id="8" />
+                <link id="10" />
+            </links>
+            <name>PorComision</name>
+            <stereotype />
+            <constraint />
+            <showAttributes />
+            <showMethods />
+            <attributes num="2">
+                <attribute>
+                    <name>ventasBrutas</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <defValue />
+                    <vis>Private</vis>
+                    <description />
+                </attribute>
+                <attribute>
+                    <name>tarifaComision</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <defValue />
+                    <vis>Private</vis>
+                    <description />
+                </attribute>
+            </attributes>
+            <operations num="6">
+                <operation>
+                    <name>setVentasBrutas</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>getVentasBrutas</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>setTarifaComision</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>ingresos</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>getTarifaComision</name>
+                    <stereotype />
+                    <constraint />
+                    <type>string</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>toString</name>
+                    <stereotype />
+                    <constraint />
+                    <type>string</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+            </operations>
+        </element>
+        <element>
+            <type>UMLCLASS</type>
+            <description />
+            <bgrColor R="128" G="255" B="128" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>2</objId>
+            <ptul X="119" Y="329" />
+            <ptdr X="300" Y="445" />
+            <links num="1">
+                <link id="6" />
+            </links>
+            <name>Asalariados</name>
+            <stereotype />
+            <constraint />
+            <showAttributes />
+            <showMethods />
+            <attributes num="1">
+                <attribute>
+                    <name>Salario_Semanal</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <defValue />
+                    <vis>Private</vis>
+                    <description />
+                </attribute>
+            </attributes>
+            <operations num="4">
+                <operation>
+                    <name> getSalarioSemanal</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>setSalarioSemanal</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>ingresos</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name> toString</name>
+                    <stereotype />
+                    <constraint />
+                    <type>string</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+            </operations>
+        </element>
+        <element>
+            <type>UMLGEN</type>
+            <description />
+            <bgrColor R="255" G="255" B="255" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>8</objId>
+            <points num="2">
+                <pt x="853" y="326" />
+                <pt x="596" y="208" />
+            </points>
+            <objStart id="4" />
+            <objEnd id="1" />
+            <stereotype />
+            <constraint />
+        </element>
+        <element>
+            <type>UMLGEN</type>
+            <description />
+            <bgrColor R="255" G="255" B="255" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>7</objId>
+            <points num="2">
+                <pt x="503" y="318" />
+                <pt x="506" y="208" />
+            </points>
+            <objStart id="3" />
+            <objEnd id="1" />
+            <stereotype />
+            <constraint />
+        </element>
+        <element>
+            <type>UMLGEN</type>
+            <description />
+            <bgrColor R="255" G="255" B="255" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>6</objId>
+            <points num="2">
+                <pt x="209" y="329" />
+                <pt x="422" y="208" />
+            </points>
+            <objStart id="2" />
+            <objEnd id="1" />
+            <stereotype />
+            <constraint />
+        </element>
+        <element>
+            <type>UMLGEN</type>
+            <description />
+            <bgrColor R="255" G="255" B="255" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>10</objId>
+            <points num="2">
+                <pt x="853" y="547" />
+                <pt x="853" y="490" />
+            </points>
+            <objStart id="5" />
+            <objEnd id="4" />
+            <stereotype />
+            <constraint />
+        </element>
+        <element>
+            <type>UMLCLASS</type>
+            <description />
+            <bgrColor R="128" G="255" B="128" />
+            <fgrColor R="0" G="0" B="0" />
+            <objId>3</objId>
+            <ptul X="441" Y="318" />
+            <ptdr X="565" Y="482" />
+            <links num="1">
+                <link id="7" />
+            </links>
+            <name>PorHoras</name>
+            <stereotype />
+            <constraint />
+            <showAttributes />
+            <showMethods />
+            <attributes num="2">
+                <attribute>
+                    <name>sueldo</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <defValue />
+                    <vis>Private</vis>
+                    <description />
+                </attribute>
+                <attribute>
+                    <name>horas</name>
+                    <stereotype />
+                    <constraint />
+                    <type>int</type>
+                    <defValue />
+                    <vis>Private</vis>
+                    <description />
+                </attribute>
+            </attributes>
+            <operations num="6">
+                <operation>
+                    <name>getSueldo</name>
+                    <stereotype />
+                    <constraint />
+                    <type />
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>setSueldo</name>
+                    <stereotype />
+                    <constraint />
+                    <type>int</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>setHoras</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name> getHoras</name>
+                    <stereotype />
+                    <constraint />
+                    <type>int</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>ingresos</name>
+                    <stereotype />
+                    <constraint />
+                    <type>double</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+                <operation>
+                    <name>toString</name>
+                    <stereotype />
+                    <constraint />
+                    <type>string</type>
+                    <vis>Public</vis>
+                    <showP />
+                    <showPT />
+                    <description />
+                    <params num="0" />
+                </operation>
+            </operations>
+        </element>
+    </elements>
+</diagram>

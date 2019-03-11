@@ -48,4 +48,8 @@ public double ingresos() {
 		return 40*this.getSueldo()+(this.getHoras()-40)*1.5	;
 				}
 }
+
+public String toString() {
+return super.toString()+" Sueldo:"+this.getSueldo()+"horas: "+this.getHoras()+" ingresos "+this.ingresos();
+}
 }

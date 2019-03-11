@@ -8,7 +8,7 @@ private double tarifaComision;
 		super(nombre, apellido, seguro_Social);
 		// TODO Auto-generated constructor stub
 		this.ventasBrutas=ventasBrutas;
-		this.tarifaComision=tarifaComision;
+		this.tarifaComision=tarifaComicion;
 		
 	}
 
@@ -31,7 +31,7 @@ private double tarifaComision;
 	@Override
 	public double ingresos() {
 		// TODO Auto-generated method stub
-		return this.tarifaComision*this.ventasBrutas;
+		return this.getTarifaComision()*this.getVentasBrutas();
 	}
 public String toString() {
 	return super.toString()+" Ventas Brutas: "+this.getVentasBrutas()+" Tarifa Comision: "+this.getTarifaComision();
