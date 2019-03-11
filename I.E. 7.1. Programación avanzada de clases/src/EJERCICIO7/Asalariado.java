@@ -29,7 +29,9 @@ public double getSalarioSemanal() {
 		this.SalarioSemanal=Salario;
 	}
 
-
+/**
+ * metodo abstracto de empleado ya lo implementamos aqui, en este caso nos devolvera el salario semanal
+ */
 @Override
 public double ingresos() {
 	return this.SalarioSemanal;

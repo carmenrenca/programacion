@@ -13,6 +13,9 @@ public class test {
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		int n;
+/**
+ * Creamos un swich para crear el menu con todas las opcioness
+ */
 		do {
 			
 		
@@ -33,7 +36,11 @@ default: System.out.println("Numero incorrecto");
 }
 		}while(n!=0);	
 	}
-	
+	/**
+	 * Este metodo nos permite crear un empleado de un tipo y el usuario dependiendo del tipo de empleado rellenará 
+	 * unos atributo y otros
+	 * @throws IOException
+	 */
 	public static void ingresar() throws IOException {
 		int n;
 		String nombre;
@@ -125,6 +132,11 @@ default: System.out.println("Numero incorrecto");
 			break;
 		}
 	}
+	/**
+	 * Introducimos el numero de seguro social y a continuacion, si es correcto 
+	 * eliminamos el empleado
+	 * @throws IOException
+	 */
 public static void eliminar() throws IOException {
 	int NSS;
 	System.out.println("Numero de Seguro social del empleado a eliminar");
@@ -137,11 +149,19 @@ public static void eliminar() throws IOException {
 	}
 
 }
+/**
+ * Listamos todos los empleados de la empresa, mostrandonos toda su inforacion por su toString
+ */
 public static void listar() {
 	for (Map.Entry<Integer, Empleado> entry : list.entrySet()) {
 	System.out.println(entry.getValue().toString());
 	}
 }
+/**
+ * introducimos su numoer de seguro social para acceder al empleado en concreto
+ * a continuacion modificaremos algunos de sus atributos
+ * @throws IOException
+ */
 public static void modificar() throws IOException {
 	int nss;
 	int n;
@@ -226,6 +246,9 @@ public static void modificar() throws IOException {
 }
 	}while(n!=0);
 }
+/**
+ * imprimimos todos lo ingresos de todos los empleados
+ */
 public static void mostrarsalarios() {
 	for (Map.Entry<Integer, Empleado> entry : list.entrySet()) {
 		System.out.println(entry.getValue().ingresos());

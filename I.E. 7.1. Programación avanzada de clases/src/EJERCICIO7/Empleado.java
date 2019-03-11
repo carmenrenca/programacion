@@ -1,5 +1,12 @@
 package EJERCICIO7;
-
+/**
+ * Clase abstracta de la cual van a partir los distintos tipos de empleados
+ * Esta es una clase genérica y nunca nos va a hacer una instancia de esta por eso la ponemos como abtracta
+ * tambien contiene un metodo abstracto (sin implementar) llamado ingresos, que ya en cada tipo de 
+ * empleado se tendrá que implementar de distinta forma
+ * @author Carmen
+ *
+ */
 public abstract class Empleado {
 private String Nombre;
 private String Apellido;

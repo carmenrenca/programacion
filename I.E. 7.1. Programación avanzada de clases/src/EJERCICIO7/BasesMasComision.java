@@ -1,5 +1,10 @@
 package EJERCICIO7;
-
+/**
+ * Esta clase extendera de la clase porcomision ya que comparte caraterísticas con esta
+ * pero su clase padre extiende de Empleado por lo que BasesMasComision es una subclase indirecta de Empleado
+ * @author Carmen
+ *
+ */
 public class BasesMasComision extends PorComision {
 
 	private double sueldobase;

@@ -40,7 +40,7 @@ public abstract class  obras {
 		this.año = año;
 	}
 	public String To_String() {
-		return "titulo "+titulo+" numero de inventario "+numero_invetario+" autor "+autor+" año: "+año;
+		return "titulo: "+titulo+" numero de inventario: "+numero_invetario+" autor: "+autor+" año: "+año;
 	}
 	
 }

@@ -27,12 +27,5 @@ public void setAltura(double altura) {
 	this.altura = altura;
 }
 
-public boolean compararescultura(esculturas e) {
-	if(this.titulo==e.getTitulo() && this.autor==e.getAutor() && this.año==e.getAño() && this.material==e.getMaterial() && this.altura==e.getAltura()) {
-		return true;
-		
-	}else {
-		return false;
-	}
-}
+
 }

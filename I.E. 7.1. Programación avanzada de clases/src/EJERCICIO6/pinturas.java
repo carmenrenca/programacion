@@ -17,13 +17,6 @@ public pinturas(String titulo, int numero_invetario, String autor, int año, int 
 
  
 
-public boolean comapararpinturas(pinturas p) {
-	if(this.titulo.equalsIgnoreCase(p.getTitulo()) && this.año==p.getAño() && this.autor.equalsIgnoreCase(p.getAutor()) && this.ancho==p.getAncho() && this.alto==p.getAlto()) {
-		return true;
-	}else {
-		return false;
-	}
-}
 
 
 public int getAlto() {
